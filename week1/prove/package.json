@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/benjaminrhansen/cse341-learn/issues"
   },
-  "homepage": "https://github.com/benjaminrhansen/cse341-learn#readme"
+  "homepage": "https://github.com/benjaminrhansen/cse341-learn#readme",
+  "dependencies": {
+    "http": "*",
+    "https": "^1.0.0"
+  }
 }
