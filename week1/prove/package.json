@@ -1,0 +1,23 @@
+{
+  "name": "prove",
+  "version": "1.0.0",
+  "description": "First Prove",
+  "main": "prove01.js",
+  "scripts": {
+    "start": "nodemon prove01.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminrhansen/cse341-learn.git"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "Benjamin Hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminrhansen/cse341-learn/issues"
+  },
+  "homepage": "https://github.com/benjaminrhansen/cse341-learn#readme"
+}
