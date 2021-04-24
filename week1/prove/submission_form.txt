@@ -1,0 +1,29 @@
+After completing the assignment, be sure to push to Github. You do not have to worry about pushing to Heroku this lesson.
+Please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your source code repository (e.g., GitHub):
+Specific prove work folder: https://github.com/benjaminrhansen/cse341-learn/tree/master/week1/prove
+Repository: https://github.com/benjaminrhansen/cse341-learn.git
+
+3. Briefly list and describe the elements of the application that are functioning. 
+Everything functions as required.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+NA.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+I shared in the "questions and help" section of Teams something cool I learned. Also, I learned how easy it was to send a response header with a new location to redirect the client after they make a request.
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+Probably some reference on how to redirect the user other than a form like Academind taught. Academind in their lecture video just discussed how to redirect the user after they submit a form but not how to redirect again after a regular GET request not a POST request.
+
+7. Please select the category you feel best describes your assignment:
+   1 - Some attempt was made
+   2 - Developing, but significantly deficient
+   3 - Slightly deficient, but still mostly adequate
+   4 - Meets requirements
+   5 - Shows creativity and excels above and beyond requirements
+5
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I did what the rubric says to redirect the user to the updated "/users" page. I created a file to share the user list so I didn't use any global variables of sorts. The create user POST request would read the current users.json file and then add the new username to the JSON object, saving it back to the file and redirecting to the "/users" page which reads from the same file and populates the list of users.
