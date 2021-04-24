@@ -5,6 +5,7 @@
   "main": "prove01.js",
   "scripts": {
     "start": "nodemon prove01.js",
+    "prove01": "nodemon prove01.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
