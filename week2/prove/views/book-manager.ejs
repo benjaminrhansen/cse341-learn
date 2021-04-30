@@ -1,0 +1,23 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/book.css">
+</head>
+
+<body>
+   <%- include('includes/navigation.ejs') %>
+
+    <main>
+        <form class="book-form" action="/book-manager/add-book" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="bookTitle" id="title">
+            </div>
+            <div class="form-control">
+                <label for="summary">Summary</label>
+                <input type="text" name="bookSummary" id="title">
+            </div>
+
+            <button class="btn" type="submit">Add Book</button>
+        </form>
+    </main>
+<%- include('includes/end.ejs') %>

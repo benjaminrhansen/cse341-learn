@@ -9,7 +9,7 @@ router.get('/',  (req, res, next) => {
     // give an absolute path using path join to build a correct
     // path for Linux/Mac/Windowss
     console.log("Processing request through code at:",require.main.filename);
-    res.sendFile(path.join(rootDir, '..', 'views', 'shop.html'));
+    res.sendFile(path.join(rootDir, 'views', 'shop.html'));
 });
 
 module.exports = router;

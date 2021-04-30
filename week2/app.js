@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({
     extended: false
 })); // yeild a middleware that parses url-encoded data
 
+// all requests for files will be forwarded to the public folder!
+// serve static content
+app.use(express.static(path.join(__dirname, 'public')));
+
 // regular routes
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);
@@ -32,7 +36,6 @@ app.listen(port); // get's the http server for us
 
 console.log("Listening on port:", port)
 
-console.log(require.main.filename);
 
 // old learning code
 // add a middleware function
