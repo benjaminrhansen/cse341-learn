@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/book.css" />
+  <link rel="stylesheet" type="text/css" href="/css/forms.css" />
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <nav class="main-header__nav">
+      <ul class="main-header__item-list">
+          <li class="main-header__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/prove02/">Library</a></li>
+          <li class="main-header__item"><a class="<%= path === '/book-manager' ? 'active' : '' %>" href="/prove02/book-manager/">Add Books</a></li>
+      </ul>
+  </nav>
+  <div class="container">
+    <h1><%= title %></h1>
+  </div>
+</div>
+<% if (path === "/book-manager") { %>
+<div class="container">
+    <main>
+        <form class="book-form" action="/prove02/book-manager/add-book" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="bookTitle" id="title">
+            </div>
+            <div class="form-control">
+                <label for="summary">Summary</label>
+                <input type="text" name="bookSummary" id="title">
+            </div>
+
+            <button class="btn" type="submit">Add Book</button>
+        </form>
+    </main>
+</div>
+<% } else { %>
+<div class="container">
+    <main>
+        <% if (hasBooks) { %>
+            <div class="grid">
+                <% books.forEach(book => { %>
+                    <article class="book__product-item">
+                        <header class="book__header">
+                            <h1 class="book__title"><%= book.title %></h1>
+                        </header>
+                        <div class="book__content">
+                            <h2 class="book__price">$19.99</h2>
+                            <p class="book__description"><%= book.summary %></p>
+                        </div>
+                    </article>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <h1>No Books Found!</h1>
+        <% } %>
+    </main>
+</div>
+<% } %>  
+
+<% include ../includes/end.ejs %>
