@@ -22,15 +22,17 @@ bookManagerRouter.get('/book-manager', (req, res, next) => {
 // route for processing the post request
 // to add books
 bookManagerRouter.post('/book-manager/add-book', (req, res, next) => {
+    const bookTitle = req.body.bookTitle;
+    const bookSummary = req.body.bookSummary;
+    const price = req.body.bookPrice;
     // with help from https://stackabuse.com/reading-and-writing-json-files-with-node-js/
     const rawdata = fs.readFileSync(path.join(rootDir, "books.json"));
     const currBooks = JSON.parse(rawdata);
-    const bookTitle = req.body.bookTitle;
-    const bookSummary = req.body.bookSummary;
     console.log("Adding book", bookTitle);
     const updatedBooks = currBooks.concat([{
             "title": bookTitle,
-            "summary": bookSummary
+            "summary": bookSummary,
+            "price": price
         }]);
     fs.writeFileSync(path.join(rootDir,'books.json'), JSON.stringify(updatedBooks));
     res.redirect('/prove02/'); // redirect home

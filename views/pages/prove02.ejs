@@ -32,6 +32,10 @@
                 <label for="summary">Summary</label>
                 <input type="text" name="bookSummary" id="title">
             </div>
+            <div class="form-control">
+                <label for="price">Price</label>
+                <input type="text" name="bookPrice" id="title">
+            </div>
 
             <button class="btn" type="submit">Add Book</button>
         </form>
@@ -48,7 +52,7 @@
                             <h1 class="book__title"><%= book.title %></h1>
                         </header>
                         <div class="book__content">
-                            <h2 class="book__price">$19.99</h2>
+                            <h2 class="book__price">$ <%= book.price %></h2>
                             <p class="book__description"><%= book.summary %></p>
                         </div>
                     </article>
