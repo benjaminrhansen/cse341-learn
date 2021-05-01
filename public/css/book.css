@@ -10,13 +10,13 @@
 }
 
 .book__title {
-    font-size: 1.2rem;
+    font-size: 3rem;
     text-align: center;
 }
 
 .book__price {
     text-align: center;
-    color: #4d4d4d;
+    color: #2ed394;
     margin-bottom: 0.5rem;
 }
 
