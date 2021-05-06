@@ -1,0 +1,34 @@
+After completing the assignment, be sure to push to Github and Heroku.
+Please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application (e.g., Heroku):
+https://warm-scrubland-05044.herokuapp.com/prove02/
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+Disregard the week2 folder. My code is in the routes folder, views/pages folder, with the CSS in the public folder. I added a route to index.js to render my prove02.js routes. 
+https://github.com/benjaminrhansen/cse341-learn
+
+3. Briefly list and describe the elements of the application that are functioning. 
+The prove02 application contains two links:
+Library — The main prove02 route showing the list of books in the system.
+Book Manager - The prove02/book-manager/add-book route allowing the user to add books. After a book is added, the user is redirected to the library to see the updated list of books. 
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+NA.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+I love the fact that you can dynamically modify what HTML is rendered using EJS. Being able to control what is rendered and shown to the user opens up a lot of doors to increasing the utility of the website.
+
+6. If you could change this assignment to be more effective or helpful, what would you change?
+I found it disturbing that I needed to look at the rubric to understand fully what I needed to do to go above and beyond. The instructions for should state that to go above and beyond, more than just the book title and summary were needed.
+
+7. Please select the category you feel best describes your assignment:
+   1 - Some attempt was made
+   2 - Developing, but significantly deficient
+   3 - Slightly deficient, but still mostly adequate
+   4 - Meets requirements
+   5 - Shows creativity and excels above and beyond requirements
+5
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+I added a book price section where the user could enter how much the book cost. Also, I figured out how to include my assignment within the template so the user can see the functionality with okay-looking HTML.

@@ -9,12 +9,45 @@
 <div class="jumbotron text-center">
   <div class="container">
     <h1><%= title %></h1>
-    <p>This is the placeholder for Team Activity 03</p>
+    <p>Search the available products</p>
+    <form class="form-special" action="/ta03" method="GET">
+      <input type="text" name="tagSearch">
+      <button class="btn" type="submit">Search Tags</button>
+    </form>
   </div>
 </div>
 <div class="container">
-  
+  <% if (prods.length > 0) { %>
+      <div class="grid">
+          <% for (let product of prods) { %>
+              <article class="card product-item">
+                  <header class="card__header">
+                      <h1 class="product__title">
+                          <%= product.name %>
+                      </h1>
+                  </header>
+                  <div class="card__image">
+                      <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+                  </div>
+                  <div class="card__content">
+                      <h2 class="product__price">$
+                          <%= product.price %>
+                      </h2>
+                      <p class="product__tags">
+                          Tags: <%= product.tags %> <!--Make this prettier, it's a list-->
+                      </p>
+                      <p class="product__description">
+                          <%= product.description %>
+                      </p>
+                  </div>
+              </article>
+              <% } %>
+      </div>
+      <% } else { %>
+          <h1>No Products Found!</h1>
+          <% } %>
 </div>
+
 
 
 </body>
